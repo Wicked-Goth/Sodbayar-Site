@@ -22,6 +22,4 @@ Multi-page personal portfolio and final project website for Web Technologies.
 
 ## Notes
 
-The project was reworked from a single-page portfolio into a multi-page site so it satisfies the final assignment requirements while staying Tailwind-based.
-
-The full written explanation of the code and user interface lives in `documentation.html`.
+The full written explanation of the code and user interface lives in `documentation.html`
