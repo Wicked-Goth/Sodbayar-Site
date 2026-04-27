@@ -61,18 +61,22 @@ Acts as a landing page
 Contains introduction, name, and short description
 Includes call-to-action buttons
 Uses a grid layout for text + image
+
 6.2 About Section
 Provides personal background
 Uses a dark theme for contrast
 Includes descriptive paragraphs and small stat blocks
+
 6.3 Academic Section
 Shows educational goals and future academic plans
 Contains cards with timelines (2027–2030)
 Uses grid layout for responsiveness
+
 6.4 Family Section
 Describes family importance
 Includes image and text content
 Uses cards for traditions and memories
+
 6.5 Family Tree Section
 
 This is one of the more complex parts of the page.
@@ -92,10 +96,12 @@ This section is manually designed rather than using a library, which makes it si
 Shows life events in timeline format
 Each “chapter” is displayed as a card
 Uses consistent styling for readability
+
 6.7 Future Section
 Displays goals and ambitions
 Uses a background image with overlay
 Contains multiple cards for different life goals
+
 6.8 Contact Section
 Includes a simple contact form
 Fields:
@@ -105,6 +111,7 @@ Message
 Uses JavaScript to:
 Prevent default form submission
 Show a temporary “Message sent” notification
+
 7. Footer
 
 The footer contains:
