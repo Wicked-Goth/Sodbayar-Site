@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sodbayar Battur | Contact</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="styles/site.css" />
+  <style>
+    #feedback-panel {
+      display: none;
+    }
+  </style>
+</head>
+<body class="page-shell min-h-screen bg-stone-100 text-slate-900">
+  <header class="sticky top-0 z-50 border-b border-white/50 bg-stone-100/90 backdrop-blur">
+    <div class="mx-auto flex max-w-6xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
+      <a href="index.html" class="flex items-center gap-3 text-sm font-bold uppercase tracking-[0.3em] text-slate-900">
+        <span class="flex h-11 w-11 items-center justify-center rounded-full bg-orange-500 text-white">SB</span>
+        <span>Sodbayar Site</span>
+      </a>
+      <nav class="hidden items-center gap-2 md:flex">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="story.html" class="nav-link">Story</a>
+        <a href="gallery.html" class="nav-link">Gallery</a>
+        <a href="contact.html" class="nav-link is-current">Contact</a>
+        <a href="documentation.html" class="nav-link">Documentation</a>
+      </nav>
+      <button id="menu-toggle" class="inline-flex rounded-full border border-slate-300 px-4 py-2 text-sm font-semibold text-slate-700 md:hidden" type="button">Menu</button>
+    </div>
+    <nav id="mobile-menu" class="mx-4 hidden rounded-3xl border border-slate-200 bg-white p-3 shadow-lg md:hidden">
+      <a href="index.html" class="mobile-link">Home</a>
+      <a href="story.html" class="mobile-link">Story</a>
+      <a href="gallery.html" class="mobile-link">Gallery</a>
+      <a href="contact.html" class="mobile-link">Contact</a>
+      <a href="documentation.html" class="mobile-link">Documentation</a>
+    </nav>
+  </header>
+
+  <main class="mx-auto max-w-6xl px-4 py-12 sm:px-6 lg:px-8">
+    <section class="grid gap-8 lg:grid-cols-[0.95fr_1.05fr]">
+      <div class="rounded-[2rem] bg-slate-950 p-8 text-white shadow-lg">
+        <span class="section-kicker text-orange-300">Form requirement</span>
+        <h1 class="display-font mt-4 text-5xl text-white sm:text-6xl">Contact and preferences</h1>
+        <p class="mt-6 text-sm leading-7 text-slate-300">
+          This form demonstrates text input, textarea, checkboxes, radio buttons, a color picker, a date selector, and buttons. Validation is handled with jQuery and each field can show its own message.
+        </p>
+        <div class="mt-8 space-y-4 text-sm leading-7 text-slate-300">
+          <p><span class="font-semibold text-white">Validation:</span> incorrect fields receive a red frame and a readable error message.</p>
+          <p><span class="font-semibold text-white">Interaction:</span> successful submission animates a feedback panel and creates a new summary item.</p>
+        </div>
+      </div>
+
+      <section class="rounded-[2rem] bg-white p-8 shadow-sm ring-1 ring-slate-200">
+        <form id="contact-form" novalidate>
+          <div class="grid gap-5 sm:grid-cols-2">
+            <div>
+              <label for="fullName" class="form-label">Full name</label>
+              <input id="fullName" name="fullName" type="text" class="form-input text-field" placeholder="Sodbayar Battur" />
+              <p class="error-text" data-for="fullName"></p>
+            </div>
+            <div>
+              <label for="email" class="form-label">Email address</label>
+              <input id="email" name="email" type="text" class="form-input text-field" placeholder="name@example.com" />
+              <p class="error-text" data-for="email"></p>
+            </div>
+          </div>
+
+          <div class="mt-5">
+            <label for="message" class="form-label">Message</label>
+            <textarea id="message" name="message" rows="5" class="form-input text-field" placeholder="Write a short message here."></textarea>
+            <p class="error-text" data-for="message"></p>
+          </div>
+
+          <div class="mt-5 grid gap-5 sm:grid-cols-2">
+            <div>
+              <label for="favColor" class="form-label">Favorite project color</label>
+              <input id="favColor" name="favColor" type="color" class="color-input" value="#f97316" />
+              <p class="error-text" data-for="favColor"></p>
+            </div>
+            <div>
+              <label for="meetingDate" class="form-label">Preferred meeting date</label>
+              <input id="meetingDate" name="meetingDate" type="date" class="form-input text-field" />
+              <p class="error-text" data-for="meetingDate"></p>
+            </div>
+          </div>
+
+          <fieldset class="mt-6">
+            <legend class="form-label">What should I focus on next?</legend>
+            <div class="mt-3 grid gap-3 sm:grid-cols-3">
+              <label class="choice-card">
+                <input type="radio" name="focusArea" value="portfolio" class="choice-input" />
+                <span>Portfolio polishing</span>
+              </label>
+              <label class="choice-card">
+                <input type="radio" name="focusArea" value="frontend" class="choice-input" />
+                <span>Frontend practice</span>
+              </label>
+              <label class="choice-card">
+                <input type="radio" name="focusArea" value="career" class="choice-input" />
+                <span>Career planning</span>
+              </label>
+            </div>
+            <p class="error-text" data-for="focusArea"></p>
+          </fieldset>
+
+          <fieldset class="mt-6">
+            <legend class="form-label">Topics you are interested in</legend>
+            <div class="mt-3 grid gap-3 sm:grid-cols-2">
+              <label class="checkbox-row">
+                <input type="checkbox" name="interests" value="study" class="checkbox-input" />
+                <span>Study habits</span>
+              </label>
+              <label class="checkbox-row">
+                <input type="checkbox" name="interests" value="travel" class="checkbox-input" />
+                <span>Living abroad</span>
+              </label>
+              <label class="checkbox-row">
+                <input type="checkbox" name="interests" value="coding" class="checkbox-input" />
+                <span>Coding projects</span>
+              </label>
+              <label class="checkbox-row">
+                <input type="checkbox" name="interests" value="family" class="checkbox-input" />
+                <span>Family story</span>
+              </label>
+            </div>
+            <p class="error-text" data-for="interests"></p>
+          </fieldset>
+
+          <div class="mt-6">
+            <label class="checkbox-row">
+              <input id="consent" name="consent" type="checkbox" class="checkbox-input" />
+              <span>I confirm that the form is complete.</span>
+            </label>
+            <p class="error-text" data-for="consent"></p>
+          </div>
+
+          <div class="mt-8 flex flex-wrap gap-3">
+            <button id="submit-btn" type="submit" class="rounded-full bg-orange-500 px-6 py-3 text-sm font-semibold text-white transition hover:bg-orange-400">Submit form</button>
+            <button id="reset-btn" type="reset" class="rounded-full border border-slate-300 px-6 py-3 text-sm font-semibold text-slate-700 transition hover:border-slate-900 hover:text-slate-900">Reset form</button>
+          </div>
+        </form>
+      </section>
+    </section>
+
+    <section id="feedback-panel" class="mt-10 rounded-[2rem] border border-emerald-200 bg-emerald-50 p-8 shadow-sm">
+      <span class="section-kicker text-emerald-700">Submission result</span>
+      <h2 id="feedback-title" class="mt-4 text-3xl font-bold text-emerald-950">Form submitted successfully</h2>
+      <p class="mt-4 text-sm leading-7 text-emerald-900">
+        The submission summary below is created in JavaScript after validation succeeds.
+      </p>
+      <ul id="submission-list" class="mt-5 list-disc space-y-3 pl-5 text-sm text-emerald-900"></ul>
+    </section>
+  </main>
+
+  <footer class="border-t border-slate-200 bg-white">
+    <div class="mx-auto flex max-w-6xl flex-col gap-3 px-4 py-8 text-sm text-slate-500 sm:px-6 lg:flex-row lg:items-center lg:justify-between lg:px-8">
+      <p>Contact page with validation, buttons, form controls, and jQuery interaction.</p>
+      <p><a href="documentation.html" class="footer-link">See how the validation works in the documentation</a></p>
+    </div>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="scripts/site.js"></script>
+</body>
+</html>

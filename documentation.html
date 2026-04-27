@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sodbayar Battur | Documentation</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="styles/site.css" />
+  <style>
+    .doc-page + .doc-page {
+      margin-top: 2rem;
+    }
+
+    @media print {
+      .doc-page {
+        page-break-after: always;
+        min-height: 100vh;
+      }
+    }
+  </style>
+</head>
+<body class="page-shell min-h-screen bg-stone-100 text-slate-900">
+  <header class="sticky top-0 z-50 border-b border-white/50 bg-stone-100/90 backdrop-blur print:hidden">
+    <div class="mx-auto flex max-w-6xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
+      <a href="index.html" class="flex items-center gap-3 text-sm font-bold uppercase tracking-[0.3em] text-slate-900">
+        <span class="flex h-11 w-11 items-center justify-center rounded-full bg-orange-500 text-white">SB</span>
+        <span>Sodbayar Site</span>
+      </a>
+      <nav class="hidden items-center gap-2 md:flex">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="story.html" class="nav-link">Story</a>
+        <a href="gallery.html" class="nav-link">Gallery</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+        <a href="documentation.html" class="nav-link is-current">Documentation</a>
+      </nav>
+      <button id="menu-toggle" class="inline-flex rounded-full border border-slate-300 px-4 py-2 text-sm font-semibold text-slate-700 md:hidden" type="button">Menu</button>
+    </div>
+    <nav id="mobile-menu" class="mx-4 hidden rounded-3xl border border-slate-200 bg-white p-3 shadow-lg md:hidden">
+      <a href="index.html" class="mobile-link">Home</a>
+      <a href="story.html" class="mobile-link">Story</a>
+      <a href="gallery.html" class="mobile-link">Gallery</a>
+      <a href="contact.html" class="mobile-link">Contact</a>
+      <a href="documentation.html" class="mobile-link">Documentation</a>
+    </nav>
+  </header>
+
+  <main class="mx-auto max-w-5xl px-4 py-12 sm:px-6 lg:px-8">
+    <section class="doc-page rounded-[2rem] bg-white p-8 shadow-sm ring-1 ring-slate-200">
+      <span class="section-kicker">Page 1</span>
+      <h1 class="display-font mt-4 text-5xl text-slate-950 sm:text-6xl">Project overview</h1>
+      <p class="mt-6 text-sm leading-8 text-slate-600">
+        This project is a personal website for Sodbayar Battur, rebuilt to satisfy the final task requirements for a web technologies course. The project uses HTML, Tailwind CSS, a shared external CSS file, page-level style tags, JavaScript, and jQuery. The final result is a responsive multi-page site with separate sections for the homepage, personal story, image gallery, contact form, and documentation.
+      </p>
+      <p class="mt-4 text-sm leading-8 text-slate-600">
+        The design goal was to keep the original personality of the portfolio while restructuring it into a format that clearly demonstrates the required technical features. Instead of a single scrolling page, the project is now split into multiple HTML files so navigation and content structure are easier to understand and easier to grade.
+      </p>
+      <p class="mt-4 text-sm leading-8 text-slate-600">
+        Tailwind CSS remains the main styling method, because it allows quick layout work and consistent spacing. A small external stylesheet adds menu design, form states, table styling, link formatting, and reusable components that make the site easier to maintain. Page-level style tags are also used to satisfy the assignment requirement for embedded CSS.
+      </p>
+    </section>
+
+    <section class="doc-page rounded-[2rem] bg-white p-8 shadow-sm ring-1 ring-slate-200">
+      <span class="section-kicker">Page 2</span>
+      <h2 class="mt-4 text-4xl font-bold text-slate-950">HTML structure and user interface</h2>
+      <p class="mt-6 text-sm leading-8 text-slate-600">
+        The website now contains five HTML files: <code>index.html</code>, <code>story.html</code>, <code>gallery.html</code>, <code>contact.html</code>, and <code>documentation.html</code>. This exceeds the minimum requirement of four HTML files. Each page shares a consistent header, navigation menu, footer, and visual language so the project feels like one system instead of disconnected pages.
+      </p>
+      <p class="mt-4 text-sm leading-8 text-slate-600">
+        The homepage introduces the purpose of the project and links to the other pages. The story page contains headings, paragraphs, an ordered list, and a bulleted list. The gallery page contains several images and a styled table that compares different chapters in life. The contact page contains a wide range of form controls including single-line text input, a multi-line text area, checkboxes, radio buttons, a color picker, a date selector, and buttons for submit and reset.
+      </p>
+      <p class="mt-4 text-sm leading-8 text-slate-600">
+        The user interface uses large headings, clearly separated sections, rounded content panels, and a warm neutral palette with orange accents. This keeps the site readable and modern while still looking like a personal project. Links are visibly styled and the active page is highlighted in the menu so visitors always know where they are.
+      </p>
+    </section>
+
+    <section class="doc-page rounded-[2rem] bg-white p-8 shadow-sm ring-1 ring-slate-200">
+      <span class="section-kicker">Page 3</span>
+      <h2 class="mt-4 text-4xl font-bold text-slate-950">CSS usage</h2>
+      <p class="mt-6 text-sm leading-8 text-slate-600">
+        The assignment asked for CSS in multiple forms, and the project now includes all of them. Some formatting is written directly in a <code>style</code> attribute, for example the introductory label on the homepage. Page-level <code>style</code> tags define small custom sections such as gradients and print behavior. The external stylesheet <code>styles/site.css</code> contains shared rules for page backgrounds, navigation, links, table formatting, form controls, buttons, and content panels.
+      </p>
+      <p class="mt-4 text-sm leading-8 text-slate-600">
+        CSS selectors based on ID and class are both used. Examples include the <code>#journey-table</code> table area and reusable classes such as <code>.nav-link</code>, <code>.form-input</code>, <code>.gallery-card</code>, and <code>.memory-item</code>. The stylesheet also contains error states such as <code>.is-invalid</code>, which is applied by jQuery during form validation.
+      </p>
+      <p class="mt-4 text-sm leading-8 text-slate-600">
+        Tailwind handles the majority of spacing, layout, typography, and responsiveness. The external CSS file is intentionally compact and focused on the extra requirements that are cleaner to manage with named selectors. This keeps the project aligned with the user request to stay Tailwind-based while still meeting the assignment rubric.
+      </p>
+    </section>
+
+    <section class="doc-page rounded-[2rem] bg-white p-8 shadow-sm ring-1 ring-slate-200">
+      <span class="section-kicker">Page 4</span>
+      <h2 class="mt-4 text-4xl font-bold text-slate-950">JavaScript and jQuery logic</h2>
+      <p class="mt-6 text-sm leading-8 text-slate-600">
+        JavaScript is used across the project for the mobile menu and for page interactions. jQuery is used on the gallery page and the contact page because the assignment explicitly requires JavaScript and jQuery. The gallery page uses jQuery to animate new content into the memory feed, modify an existing heading, and append a newly created HTML element after a button click.
+      </p>
+      <p class="mt-4 text-sm leading-8 text-slate-600">
+        The contact page demonstrates form checking in detail. Each field is validated when the form is submitted. If a field is incorrect, the script writes a specific error message into the matching error paragraph and adds a red frame by applying the <code>.is-invalid</code> class. This behavior covers single-line text input, textarea, radio button groups, checkboxes, and date selection. A successful submission opens a hidden feedback panel with animation and creates a new summary list of the submitted choices.
+      </p>
+      <p class="mt-4 text-sm leading-8 text-slate-600">
+        The script also demonstrates multiple selector styles: by tag name with <code>$("input")</code>, by name with selectors such as <code>$("[name='focusArea']")</code>, by class such as <code>$(".form-input")</code>, and by identifier with selectors such as <code>$("#contact-form")</code> and <code>$("#feedback-panel")</code>. This directly answers the rubric item about selecting elements in different ways.
+      </p>
+    </section>
+
+    <section class="doc-page rounded-[2rem] bg-white p-8 shadow-sm ring-1 ring-slate-200">
+      <span class="section-kicker">Page 5</span>
+      <h2 class="mt-4 text-4xl font-bold text-slate-950">Conclusion and file summary</h2>
+      <p class="mt-6 text-sm leading-8 text-slate-600">
+        The finished project is now structured as a complete final submission rather than a single demonstration page. It includes multiple HTML files, embedded and external CSS, the required HTML elements, JavaScript and jQuery behaviors, and documentation that explains both the code and the user interface.
+      </p>
+      <p class="mt-4 text-sm leading-8 text-slate-600">
+        File summary: <code>index.html</code> presents the project, <code>story.html</code> contains personal background and lists, <code>gallery.html</code> contains images and a table, <code>contact.html</code> contains the validated form, <code>documentation.html</code> provides the written explanation, <code>styles/site.css</code> provides shared CSS, and <code>scripts/site.js</code> contains the mobile navigation, animation, and validation logic.
+      </p>
+      <p class="mt-4 text-sm leading-8 text-slate-600">
+        The project remains personal in tone, but it is now also much easier to inspect against the final task checklist. That balance was the main objective of the redesign.
+      </p>
+    </section>
+  </main>
+
+  <footer class="border-t border-slate-200 bg-white print:hidden">
+    <div class="mx-auto flex max-w-6xl flex-col gap-3 px-4 py-8 text-sm text-slate-500 sm:px-6 lg:flex-row lg:items-center lg:justify-between lg:px-8">
+      <p>Documentation page designed to cover a five-page write-up when printed.</p>
+      <p><a href="index.html" class="footer-link">Back to homepage</a></p>
+    </div>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="scripts/site.js"></script>
+</body>
+</html>
